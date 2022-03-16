@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div x-data="main" x-init="loadStorage">
+        <h1 x-text="greet"></h1>
+        <p x-text="value"></p>
+        <input type="text" x-model="value">
+        <button @click="setStorage( 'greet', value )" > Set </button>
+        <button @click="clearStorage"> Clear</button>
+    </div>
+</body>
+</html>
